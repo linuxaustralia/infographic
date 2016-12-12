@@ -1,0 +1,97 @@
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-Bold.ttf');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-Light.ttf');
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-Medium.ttf');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-SemiBold.ttf');
+  font-weight: 500;
+  font-style: normal;
+}
+
+svg text {
+  font-size: 30px;
+  font-weight: 200;
+}
+svg text.legendText {
+  font-size: 16px;
+  font-weight: 200;
+}
+
+svg path {
+  stroke: #000;
+  stroke-width: 1.7;
+  fill: none;
+}
+
+svg path.TitlePath {
+  stroke: none;
+  fill: none;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#wrapper {
+  width: 100%;
+  top: 0;
+  position: absolute;
+}
+
+#visualisation {
+  position: relative;
+  top: 0;
+  width: 100%;
+}
+
+#narrative {
+  position: relative;
+  width: 65%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2%;
+  border-top: 2px dotted black;
+  text-align: center;
+}
+
+a {
+  color: #8647A8;
+}
+a:hover {
+  color: #BC47A9;
+}
+h1 {
+  font-size: 250%;
+  font-weight: 300;
+}
+h2 {
+  font-size: 185%;
+  font-weight: 200;
+}
+h3 {
+  font-size: 170%;
+  font-weight: 200;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+p {
+  font-size: 135%;
+  font-weight: 200;
+}
