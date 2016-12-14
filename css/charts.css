@@ -31,6 +31,11 @@ svg text.legendText {
   font-size: 16px;
   font-weight: 200;
 }
+svg text.labelText {
+  font-size: 16px;
+  font-weight: 400;
+  fill: #fff;
+}
 
 svg path {
   stroke: #000;
@@ -41,6 +46,11 @@ svg path {
 svg path.TitlePath {
   stroke: none;
   fill: none;
+}
+
+svg path.slice{
+	stroke-width:1px;
+  stroke: #393939;
 }
 
 body {
