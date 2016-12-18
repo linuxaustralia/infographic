@@ -28,13 +28,23 @@ svg text {
   font-weight: 200;
 }
 svg text.legendText {
-  font-size: 16px;
-  font-weight: 200;
+  font-size: 12px;
+  font-weight: 300;
 }
-svg text.labelText {
-  font-size: 16px;
+svg textPath.ExpensesTitle {
+  font-size: 24px;
   font-weight: 400;
-  fill: #fff;
+  fill: #393939;
+}
+svg text.ExpensesLabels {
+  font-size: 12px;
+  font-weight: 300;
+  fill: #393939;
+}
+
+svg polyline.lines {
+  stroke: #393939;
+  stroke-width: 0.9;
 }
 
 svg path {
@@ -46,11 +56,6 @@ svg path {
 svg path.TitlePath {
   stroke: none;
   fill: none;
-}
-
-svg path.slice{
-	stroke-width:1px;
-  stroke: #393939;
 }
 
 body {
