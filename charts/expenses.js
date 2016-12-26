@@ -1,4 +1,4 @@
-
+/* LA Infographic */
 
 var color = d3.scaleOrdinal()
     .range([
@@ -103,7 +103,7 @@ var ExpensesPie = d3.pie()
 var BaseSvg = d3.select("#visualisation").append("svg")
     .attr("width", width)
     .attr("height", height)
-    .append("g")
+    .attr("id", 'BaseSvg')
     .attr("transform", "translate(" + (width / 2 - annularXOffset) + "," + (height / 2 - annularYOffset) + ")");
 
 /*
@@ -150,7 +150,9 @@ d3.csv("expenses.csv", ExpensesType, function(error, ExpensesData) {
 
 
 
-    var ExpensesLabels = LabelLayer.selectAll("text");
+    var ExpensesLabels = LabelLayer.selectAll('text')
+    var ExpensesMarkers = LabelLayer.selectAll('defs')
+    var ExpensesPaths = LabelLayer.selectAll('path.pointer').data(ExpensesPie(ExpensesData))
 
     ExpensesLabels.data(ExpensesPie(ExpensesData))
     .enter().append("text")
@@ -174,8 +176,15 @@ d3.csv("expenses.csv", ExpensesType, function(error, ExpensesData) {
         d.sy = d.oy = d.y + 5;
     });
 
-    LabelLayer.append("defs").append("marker")
-    .attr("id", "circ")
+
+
+    /* The markers are defined, but are used by the paths;
+     * the markers will only display if the paths are displayed
+     */
+
+    ExpensesMarkers.enter()
+    .append('defs').append('marker')
+    .attr("id", 'marker')
     .attr("markerWidth", 6)
     .attr("markerHeight", 6)
     .attr("refX", 3)
@@ -185,20 +194,23 @@ d3.csv("expenses.csv", ExpensesType, function(error, ExpensesData) {
     .attr("cy", 3)
     .attr("r", 3);
 
-    ExpensesLabels.selectAll("path.pointer")
-    .data(ExpensesData).enter()
+    ExpensesPaths.enter()
     .append("path")
     .attr("class", "pointer")
-    .style("fill", "none")
-    .style("stroke", "black")
-    .attr("marker-end", "url(#circ)")
+    .attr("marker-end", "url(#marker)")
     .attr("d", function(d) {
+        console.log('d.cx -> ' + d.cx);
+        console.log('d.ox -> ' + d.ox);
+        console.log('d.sx -> ' + d.sx);
+        console.log('d.cy -> ' + d.cy);
+        console.log('d.oy -> ' + d.oy);
+        console.log('d.sy -> ' + d.sy);
         if(d.cx > d.ox) {
             return "M" + d.sx + "," + d.sy + "L" + d.ox + "," + d.oy + " " + d.cx + "," + d.cy;
         } else {
             return "M" + d.ox + "," + d.oy + "L" + d.sx + "," + d.sy + " " + d.cx + "," + d.cy;
         }
-    });
+    })
 
 
 
@@ -231,6 +243,7 @@ TitleLayer.append("text")
       .attr("class", "ExpensesTitle")
       .text(ExpensesTitleText);
 
+
 /*
   Glorious functions of deliciousness
 */
@@ -242,4 +255,29 @@ function ExpensesType(d) {
 
 function midAngle(d){
     return d.startAngle + (d.endAngle - d.startAngle)/2;
+}
+
+function wrap(text, width) {
+  text.each(function() {
+    var text = d3.select(this),
+        words = text.text().split(/\s+/).reverse(),
+        word,
+        line = [],
+        lineNumber = 0,
+        lineHeight = 1.1, // ems
+        y = text.attr("y"),
+        dy = parseFloat(text.attr("dy")),
+        tspan = text.text(null).append("tspan").attr("x", 0).attr("y", y).attr("dy", dy + "em");
+    while (word = words.pop()) {
+      line.push(word);
+      tspan.text(line.join(" "));
+      if (tspan.node().getComputedTextLength() > width) {
+        line.pop();
+        tspan.text(line.join(" "));
+        line = [word];
+        tspan = text.append("tspan").attr("x", 0).attr("y", y).attr("dy", ++lineNumber * lineHeight + dy + "em").text(word);
+      }
+    }
+  });
+
 }

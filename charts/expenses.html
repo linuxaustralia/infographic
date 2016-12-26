@@ -16,14 +16,26 @@
 <script src="../js/d3.v4.min.js"></script>
 <!-- Include d3-tip package -->
 <script src="../js/d3-tip.js"></script>
+<!-- Include d3-save-svg package -->
+<script src="../js/d3-save-svg.min.js"></script>
+
+
 
 
 
 <div id="wrapper">
 
   <div id="visualisation">
-    <!-- Include d3.js annular visualisation -->
+    <!-- Include visualisation code -->
     <script src="expenses.js"></script>
+
+    <div id="downloadButton">
+      <button name="download" id="download" value="download">Download visualisation as SVG file</button>
+    </div>
+
+    <script src="../js/download.js"></script>
+
+
   </div>
 
 

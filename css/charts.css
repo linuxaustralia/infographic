@@ -53,6 +53,12 @@ svg path {
   fill: none;
 }
 
+svg path.pointer {
+  stroke: #393939;
+  stroke-width: 1.7;
+  fill: none;
+}
+
 svg path.TitlePath {
   stroke: none;
   fill: none;
@@ -84,6 +90,23 @@ body {
   margin-top: 2%;
   border-top: 2px dotted black;
   text-align: center;
+}
+
+#download {
+  padding: 5px;
+  font-size: 150%;
+  font-family: 'Poppins', sans-serif;
+  float: right;
+  margin: 5%;
+  border: 1px solid black;
+}
+
+#download:hover {
+  background-color: #FFDA66;
+}
+
+#download:active {
+  background-color: #fefefe;
 }
 
 a {
