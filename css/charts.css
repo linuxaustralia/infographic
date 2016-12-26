@@ -23,6 +23,12 @@
   font-style: normal;
 }
 
+svg text, svg textPath {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-Medium.ttf');
+  font-weight: 300;
+  font-style: normal;
+}
 svg text {
   font-size: 30px;
   font-weight: 200;
