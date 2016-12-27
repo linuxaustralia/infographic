@@ -103,7 +103,7 @@ var ExpensesPie = d3.pie()
 var BaseSvg = d3.select("#visualisation").append("svg")
     .attr("width", width)
     .attr("height", height)
-    .attr("id", 'BaseSvg')
+    .attr('id', 'BaseSvg')
     .attr("transform", "translate(" + (width / 2 - annularXOffset) + "," + (height / 2 - annularYOffset) + ")");
 
 /*
@@ -114,7 +114,7 @@ var TitleLayer      = BaseSvg.append('g');
 var LabelLayer      = BaseSvg.append('g');
 
 /*
-  CSV calls for each data set
+  load the data from a CSV file
 */
 
 d3.csv("expenses.csv", ExpensesType, function(error, ExpensesData) {
@@ -124,10 +124,10 @@ d3.csv("expenses.csv", ExpensesType, function(error, ExpensesData) {
     .rollup(function (v) { return d3.sum(v, function(d) { return d.Value})})
     .entries(ExpensesData);
 
-  var g = ExpensesLayer.selectAll(".arc")
+  var ExpensesArcSet = ExpensesLayer.selectAll('.arc')
       .data(ExpensesPie(ExpensesData))
       .enter().append("g")
-      .attr("class", "ExpensesArc");
+      .attr ('class', "ExpensesArc")
 
   var ExpensesTip = d3.tip()
       .attr('class', 'd3-tip')
@@ -137,8 +137,9 @@ d3.csv("expenses.csv", ExpensesType, function(error, ExpensesData) {
 
   ExpensesLayer.call(ExpensesTip);
 
-  g.append("path")
-      .attr("d", ExpensesArc)
+  ExpensesArcSet.append("path")
+      .attr('d', ExpensesArc)
+      .attr('class', 'ExpensesArcPath')
       .style("fill", function(d) { return color(d.data.Account); })
       .on('mouseover', ExpensesTip.show)
       .on('mouseout', ExpensesTip.hide);
@@ -148,11 +149,10 @@ d3.csv("expenses.csv", ExpensesType, function(error, ExpensesData) {
       Text labels and lines to each label
     */
 
-
-
     var ExpensesLabels = LabelLayer.selectAll('text')
-    var ExpensesMarkers = LabelLayer.selectAll('defs')
-    var ExpensesPaths = LabelLayer.selectAll('path.pointer').data(ExpensesPie(ExpensesData))
+    var ExpensesMarkers = ExpensesLayer.selectAll('defs')
+
+    var ExpensesPaths = ExpensesLayer.selectAll('.ExpensesArc')
 
     ExpensesLabels.data(ExpensesPie(ExpensesData))
     .enter().append("text")
@@ -168,7 +168,7 @@ d3.csv("expenses.csv", ExpensesType, function(error, ExpensesData) {
         return d.y = Math.sin(a) * (radius - labelyOffset);
     })
     .text(function(d) { return d.data.Account + ' - ' + d3.format("$d")(d.data.Value); })
-    .attr("class", "ExpensesLabels")
+    .attr('class', "ExpensesLabels")
     .each(function(d) {
         var bbox = this.getBBox();
         d.sx = d.x - bbox.width/2 - 2;
@@ -178,13 +178,19 @@ d3.csv("expenses.csv", ExpensesType, function(error, ExpensesData) {
 
 
 
+    var ExpensesLines = LabelLayer.select(".lines").selectAll("polyline")
+		.data(ExpensesPie(ExpensesData))
+
+    var ExpensesLines = LabelLayer.selectAll('polyline')
+
+
     /* The markers are defined, but are used by the paths;
      * the markers will only display if the paths are displayed
      */
 
     ExpensesMarkers.enter()
     .append('defs').append('marker')
-    .attr("id", 'marker')
+    .attr('class', 'marker')
     .attr("markerWidth", 6)
     .attr("markerHeight", 6)
     .attr("refX", 3)
@@ -194,28 +200,38 @@ d3.csv("expenses.csv", ExpensesType, function(error, ExpensesData) {
     .attr("cy", 3)
     .attr("r", 3);
 
-    ExpensesPaths.enter()
-    .append("path")
-    .attr("class", "pointer")
-    .attr("marker-end", "url(#marker)")
-    .attr("d", function(d) {
-        console.log('d.cx -> ' + d.cx);
-        console.log('d.ox -> ' + d.ox);
-        console.log('d.sx -> ' + d.sx);
-        console.log('d.cy -> ' + d.cy);
-        console.log('d.oy -> ' + d.oy);
-        console.log('d.sy -> ' + d.sy);
-        if(d.cx > d.ox) {
-            return "M" + d.sx + "," + d.sy + "L" + d.ox + "," + d.oy + " " + d.cx + "," + d.cy;
-        } else {
-            return "M" + d.ox + "," + d.oy + "L" + d.sx + "," + d.sy + " " + d.cx + "," + d.cy;
-        }
+	ExpensesLines.data(ExpensesPie(ExpensesData))
+    .enter()
+		.append("polyline")
+    .style("stroke", "black")
+    .style('fill', 'none')
+    .style('stroke-width', '1')
+    .attr('marker-end', 'url(#marker)')
+
+
+    .attr('points', function (d){
+      var a = d.startAngle + (d.endAngle - d.startAngle)/2 - Math.PI/2;
+      console.log('a is - ' + a);
+
+      d.cx = Math.cos(a) * (radius - labelcxOffset);
+      console.log('d.cx is - ' + d.cx);
+
+      d.x = Math.cos(a) * (radius - labelxOffset);
+      console.log('d.x is - ' + d.x);
+
+      d.cy = Math.sin(a) * (radius - labelcyOffset);
+      console.log('d.cy is - ' + d.cy);
+
+      d.y = Math.sin(a) * (radius - labelyOffset);
+      console.log('d.y is - ' + d.y);
+
+      return ExpensesArc.centroid(d) + ' ' + d.x + ' ' + d.y;
     })
 
-
-
-
-
+    .attr('d', function(d) {
+        console.log('ExpensesArc.centroid(d) ' + ExpensesArc.centroid(d));
+        console.log();
+    })
 
 });
 
@@ -232,15 +248,15 @@ d3.csv("expenses.csv", ExpensesType, function(error, ExpensesData) {
 var ExpensesTitleText     = 'Linux Australia Non-Event Expenditure 1 October 2015 - 30 September 2016';
 
 TitleLayer.append("path")
-      .attr("d", ExpensesTitleArc)
-      .attr("id", "ExpensesTitle")
-      .attr("class", "TitlePath");
+      .attr('d', ExpensesTitleArc)
+      .attr('id', "ExpensesTitle")
+      .attr('class', "TitlePath");
 
 TitleLayer.append("text")
-      .attr("id", "ExpensesTitleText")
+      .attr('id', "ExpensesTitleText")
       .append("textPath")
       .attr("xlink:href", "#ExpensesTitle") //place the ID of the path here
-      .attr("class", "ExpensesTitle")
+      .attr('class', "ExpensesTitle")
       .text(ExpensesTitleText);
 
 

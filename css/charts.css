@@ -23,6 +23,8 @@
   font-style: normal;
 }
 
+/* d3-save-svg doesn't support any CSS styles that occur outside the svg, for instance the body element, which then cascades, or font-face. So, fonts, and any rules that occur higher in the CSS hierarchy than svg have to be redefined if you want them to be exported to the downloadable svg file */
+
 svg text, svg textPath {
   font-family: 'Poppins';
   src: url('../fonts/Poppins-Medium.ttf');
