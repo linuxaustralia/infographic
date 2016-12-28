@@ -150,9 +150,8 @@ d3.csv("expenses.csv", ExpensesType, function(error, ExpensesData) {
     */
 
     var ExpensesLabels = LabelLayer.selectAll('text')
-    var ExpensesMarkers = ExpensesLayer.selectAll('defs')
-
-    var ExpensesPaths = ExpensesLayer.selectAll('.ExpensesArc')
+    var ExpensesMarkers = LabelLayer.selectAll('marker')
+    var ExpensesLines = LabelLayer.selectAll('polyline')
 
     ExpensesLabels.data(ExpensesPie(ExpensesData))
     .enter().append("text")
@@ -176,25 +175,18 @@ d3.csv("expenses.csv", ExpensesType, function(error, ExpensesData) {
         d.sy = d.oy = d.y + 5;
     });
 
-
-
-    var ExpensesLines = LabelLayer.select(".lines").selectAll("polyline")
-		.data(ExpensesPie(ExpensesData))
-
-    var ExpensesLines = LabelLayer.selectAll('polyline')
-
-
     /* The markers are defined, but are used by the paths;
      * the markers will only display if the paths are displayed
      */
 
-    ExpensesMarkers.enter()
-    .append('defs').append('marker')
+    ExpensesMarkers.data(ExpensesPie(ExpensesData))
+    .enter()
+    .append('marker')
     .attr('class', 'marker')
-    .attr("markerWidth", 6)
-    .attr("markerHeight", 6)
-    .attr("refX", 3)
-    .attr("refY", 3)
+    .attr('id', 'marker')
+    .attr("markerWidth", 3)
+    .attr("refX", 0)
+    .attr("refY", 0)
     .append("circle")
     .attr("cx", 3)
     .attr("cy", 3)
@@ -203,10 +195,12 @@ d3.csv("expenses.csv", ExpensesType, function(error, ExpensesData) {
 	ExpensesLines.data(ExpensesPie(ExpensesData))
     .enter()
 		.append("polyline")
+    .attr('marker-start', 'url(#marker)')
     .style("stroke", "black")
     .style('fill', 'none')
-    .style('stroke-width', '1')
-    .attr('marker-end', 'url(#marker)')
+    .style('stroke-width', '2')
+    .style('opacity', '0.9')
+
 
 
     .attr('points', function (d){
