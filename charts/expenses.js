@@ -16,7 +16,6 @@ var color = d3.scaleOrdinal()
       '#B0B0B0',
       '#FFF3CC',
       '#FFCCCC',
-      '#D7D7D7',
       '#fff'
       ])
     .domain([
@@ -29,12 +28,11 @@ var color = d3.scaleOrdinal()
         'Travel',
         'Storage rental',
         'Gift',
-        'Conference bid team review',
+        'Conf bid review',
         'Server',
-        'Printing and stationery',
+        'Stationery',
         'Bank fees',
         'Foreign currency losses',
-        'Subscriptions',
         'Other'
     ]);
 
@@ -50,9 +48,9 @@ var width = innerWidth * widthModifier,
 
 var annularXOffset  = 100; // how much to shift the annulars horizontally from centre
 var annularYOffset  = 0; // how much to shift the annulars vertically from centre
-var annularWidth    = 150; // width of each annular
+var annularWidth    = 160; // width of each annular
 var annularSpacing  = 15;
-var annularMargin   = 320; // margin between annulars and canvas
+var annularMargin   = 250; // margin between annulars and canvas
 var padAngle        = 0.025; // amount that each segment of an annular is padded
 var cornerRadius    = 5; // amount that the sectors are rounded
 
@@ -66,20 +64,15 @@ var tipXOffSet = 0; // x offset for tooltip display in pixels
 var tipYOffSet = 0; // y offset for tooltip display in pixels
 
 /* Variables used with the labels */
-
-var labelPercentage = 0.95 // a value representing how far away from the outerArc the label is positioned
-
-var labelcxOffset = 50;
-var labelxOffset  = 20;
-
-var labelcyOffset = 50;
+var labelPercentage = 0.6 // a value representing how far away from the outerArc the label is positioned
+var labelxOffset  = 10;
 var labelyOffset  = 20;
 
 var markerSize = 2;
 var markerOpacity = 0.9;
 
 var lineOpacity = 0.7;
-var linePercentage = 0.9; // a value between 0 and 1 representing what percentage of the radius the label line is.
+var linePercentage = 0.95; // a value between 0 and 1 representing what percentage of the radius the label line is.
 
 /*
   Main Annular
@@ -164,18 +157,24 @@ d3.csv('expenses.csv', ExpensesType, function(error, ExpensesData) {
 
     ExpensesLabels.data(ExpensesPie(ExpensesData))
     .enter().append('text')
-    .attr('text-anchor', 'middle')
+
+    .attr('text-anchor', function(d){
+      var a = midAngle(d);
+      var pos = radius * (a < Math.PI/2 ? 1 : -1);
+      return (pos < 0 ? 'end' : 'start');
+    })
+
     .attr('x', function(d) {
-        var a = d.startAngle + (d.endAngle - d.startAngle)/2 - Math.PI/2;
-        d.cx = Math.cos(a) * (radius - labelcxOffset);
-        return d.x = Math.cos(a) * (radius - labelxOffset);
+        var a = midAngle(d);
+        var pos = radius * (a < Math.PI/2 ? 1 : -1);
+        var offset = (pos > 0 ? labelxOffset : (labelxOffset * -1));
+        return d.x = Math.cos(a) * (radius * linePercentage) + offset;
     })
     .attr('y', function(d) {
-        var a = d.startAngle + (d.endAngle - d.startAngle)/2 - Math.PI/2;
-        d.cy = Math.sin(a) * (radius - labelcyOffset);
-        return d.y = Math.sin(a) * (radius - labelyOffset);
+        var a = midAngle(d);
+        return d.y = Math.sin(a) * (radius * linePercentage);
     })
-    .text(function(d) { return d.data.Account + ' - ' + d3.format('$d')(d.data.Value); })
+    .text(function(d) { return '  ' + d.data.Account + ' - ' + d3.format('$d')(d.data.Value) + '  '; })
     .attr('class', 'ExpensesLabels')
     .each(function(d) {
         var bbox = this.getBBox();
@@ -220,35 +219,10 @@ d3.csv('expenses.csv', ExpensesType, function(error, ExpensesData) {
     .style('opacity', lineOpacity)
 
     .attr('points', function (d){
-
-      var a = d.startAngle + (d.endAngle - d.startAngle)/2 - Math.PI/2;
-      console.log('a is - ' + a);
-
+      var a = midAngle(d);
       d.x = (Math.cos(a) * (radius * linePercentage));
-
-      console.log('d.x is - ' + d.x);
-
-
       d.y = (Math.sin(a) * (radius * linePercentage));
-      console.log('d.y is - ' + d.y);
-
-      var pos = radius * (a < Math.PI/2 ? 1 : -1);
-      console.log(pos);
-
-  /*    return function(t) {
-                var d2 = interpolate(t);
-                var pos = outerArc.centroid(d2);
-                pos[0] = radius * 0.95 * (midAngle(d2) < Math.PI ? 1 : -1);
-
-                console.log('arc.centroid is - ' + arc.centroid[d2]);
-                console.log('outerArc.centroid(d2) is - ' + outerArc.centroid(d2));
-                console.log('pos - ' + pos);
-
-                return [arc.centroid(d2), outerArc.centroid(d2), pos];
-            }; */
-
-
-      return ExpensesArc.centroid(d) + ' ' + d.x + ' ' + d.y + ' ' + pos + ' ' + d.y;
+      return ExpensesArc.centroid(d) + ' ' + d.x + ' ' + d.y;
     })
 
 });
@@ -293,30 +267,5 @@ function ExpensesType(d) {
 }
 
 function midAngle(d){
-    return d.startAngle + (d.endAngle - d.startAngle)/2;
-}
-
-function wrap(text, width) {
-  text.each(function() {
-    var text = d3.select(this),
-        words = text.text().split(/\s+/).reverse(),
-        word,
-        line = [],
-        lineNumber = 0,
-        lineHeight = 1.1, // ems
-        y = text.attr('y'),
-        dy = parseFloat(text.attr('dy')),
-        tspan = text.text(null).append('tspan').attr('x', 0).attr('y', y).attr('dy', dy + 'em');
-    while (word = words.pop()) {
-      line.push(word);
-      tspan.text(line.join(' '));
-      if (tspan.node().getComputedTextLength() > width) {
-        line.pop();
-        tspan.text(line.join(' '));
-        line = [word];
-        tspan = text.append('tspan').attr('x', 0).attr('y', y).attr('dy', ++lineNumber * lineHeight + dy + 'em').text(word);
-      }
-    }
-  });
-
+    return d.startAngle + (d.endAngle - d.startAngle)/2 - Math.PI/2;
 }

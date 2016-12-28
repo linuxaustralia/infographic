@@ -35,10 +35,6 @@ svg text {
   font-size: 30px;
   font-weight: 200;
 }
-svg text.legendText {
-  font-size: 12px;
-  font-weight: 300;
-}
 svg textPath.ExpensesTitle {
   src: url('../fonts/Poppins-Bold.ttf');
   font-weight: 700;
@@ -46,28 +42,25 @@ svg textPath.ExpensesTitle {
   fill: #393939;
 }
 svg text.ExpensesLabels {
-  font-size: 12px;
-  font-weight: 300;
+  src: url('../fonts/Poppins-SemiBold.ttf');
+  font-size: 14px;
+  font-weight: 400;
   fill: #393939;
 }
-
 svg polyline.lines {
   stroke: #393939;
   stroke-width: 0.9;
 }
-
 svg path {
   stroke: #000;
   stroke-width: 1.7;
   fill: none;
 }
-
 svg path.pointer {
   stroke: #393939;
   stroke-width: 1.7;
   fill: none;
 }
-
 svg path.TitlePath {
   stroke: none;
   fill: none;
