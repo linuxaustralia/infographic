@@ -40,8 +40,9 @@ svg text.legendText {
   font-weight: 300;
 }
 svg textPath.ExpensesTitle {
+  src: url('../fonts/Poppins-Bold.ttf');
+  font-weight: 700;
   font-size: 24px;
-  font-weight: 400;
   fill: #393939;
 }
 svg text.ExpensesLabels {
