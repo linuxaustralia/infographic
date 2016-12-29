@@ -5,46 +5,45 @@ var color = d3.scaleOrdinal()
       '#ffc100',
       '#ff0000',
       '#393939',
-      '#FFCD33',
-      '#FF3333',
+      '#ffcd33',
+      '#ff3333',
       '#616161',
-      '#FFDA66',
-      '#FF6666',
+      '#ffda66',
+      '#ff6666',
       '#888888',
-      '#FFE699',
-      '#FF9999',
-      '#B0B0B0',
-      '#FFF3CC',
-      '#FFCCCC',
+      '#ffe699',
+      '#ff9999',
+      '#b0b0b0',
+      '#fff3cc',
+      '#ffcccc',
       '#fff'
-      ])
+    ])
     .domain([
-        'Face to face',
-        'Insurance',
-        'Merchant fees',
-        'Consulting accounting',
-        'Donations',
-        'Grants',
-        'Travel',
-        'Storage rental',
-        'Gift',
-        'Conf bid review',
-        'Server',
-        'Stationery',
-        'Bank fees',
-        'Foreign currency losses',
-        'Other'
-    ]);
+      'Face to face',
+      'Insurance',
+      'Merchant fees',
+      'Consulting accounting',
+      'Donations',
+      'Grants',
+      'Travel',
+      'Storage rental',
+      'Gift',
+      'Conf bid review',
+      'Server',
+      'Stationery',
+      'Bank fees',
+      'Foreign currency losses',
+      'Other'
+  ])
 
+var ExpensesArcSequence = 0
 
-var ExpensesArcSequence = 0;
+var widthModifier = 0.95
+var heightModifier = 0.95
 
-var widthModifier = 0.95;
-var heightModifier = 0.95;
-
-var width = innerWidth * widthModifier,
-    height = innerHeight * heightModifier,
-    radius = Math.min(width, height) / 2;
+var width = innerWidth * widthModifier
+var height = innerHeight * heightModifier
+var radius = Math.min(width, height) / 2
 
 var annularXOffset  = 100; // how much to shift the annulars horizontally from centre
 var annularYOffset  = 0; // how much to shift the annulars vertically from centre
@@ -192,7 +191,6 @@ d3.csv('expenses.csv', ExpensesType, function(error, ExpensesData) {
     .append('marker')
     .attr('class', 'marker')
     .attr('id', 'marker')
-
     .attr('markerWidth', '12')
     .attr('markerHeight', '12')
     .attr('orient', 'auto')
