@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+
+  <!-- CSS styles for annulars -->
+  <link rel="stylesheet" type="text/css" href="../css/charts.css" media="screen" />
+  <!-- CSS styles for d3-tip library -->
+  <link rel="stylesheet" type="text/css" href="../css/d3-tip.css" media="screen" />
+
+
+</head>
+<meta charset="utf-8">
+
+<body>
+
+<!-- Include d3.js base library -->
+<script src="../js/d3.v4.min.js"></script>
+<!-- Include d3-tip package -->
+<script src="../js/d3-tip.js"></script>
+<!-- Include d3-save-svg package -->
+<script src="../js/d3-save-svg.min.js"></script>
+
+
+
+
+
+<div id="wrapper">
+
+  <div id="visualisation">
+    <!-- Include visualisation code -->
+    <script src="expenses.js"></script>
+
+    <div id="downloadButton">
+      <button name="download" id="download" value="download">Download visualisation as SVG file</button>
+    </div>
+
+    <script src="../js/download.js"></script>
+
+
+  </div>
+
+
+</div>
+
+</body>
+</html>
