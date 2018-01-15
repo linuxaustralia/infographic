@@ -1,33 +1,45 @@
 @font-face {
-  font-family: 'Poppins';
-  src: url('../fonts/Poppins-Bold.ttf');
+  font-family: 'Cairo';
+  src: url('../fonts/Cairo-Black.ttf');
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Poppins';
-  src: url('../fonts/Poppins-Light.ttf');
-  font-weight: 100;
+  font-family: 'Cairo';
+  src: url('../fonts/Cairo-Bold.ttf');
+  font-weight: 500;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Poppins';
-  src: url('../fonts/Poppins-Medium.ttf');
+  font-family: 'Cairo';
+  src: url('../fonts/Cairo-SemiBold.ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Cairo';
+  src: url('../fonts/Cairo-Regular.ttf');
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Poppins';
-  src: url('../fonts/Poppins-SemiBold.ttf');
-  font-weight: 500;
+  font-family: 'Cairo';
+  src: url('../fonts/Cairo-Light.ttf');
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Cairo';
+  src: url('../fonts/Cairo-ExtraLight.ttf');
+  font-weight: 100;
   font-style: normal;
 }
 
 /* d3-save-svg doesn't support any CSS styles that occur outside the svg, for instance the body element, which then cascades, or font-face. So, fonts, and any rules that occur higher in the CSS hierarchy than svg have to be redefined if you want them to be exported to the downloadable svg file */
 
 svg text, svg textPath {
-  font-family: 'Poppins';
-  src: url('../fonts/Poppins-Medium.ttf');
+  font-family: 'Cairo';
+  src: url('../fonts/Cairo-Medium.ttf');
   font-weight: 300;
   font-style: normal;
 }
@@ -36,13 +48,13 @@ svg text {
   font-weight: 200;
 }
 svg textPath.ExpensesTitle {
-  src: url('../fonts/Poppins-Bold.ttf');
+  src: url('../fonts/Cairo-Bold.ttf');
   font-weight: 700;
   font-size: 24px;
   fill: #393939;
 }
 svg text.ExpensesLabels {
-  src: url('../fonts/Poppins-SemiBold.ttf');
+  src: url('../fonts/Cairo-SemiBold.ttf');
   font-size: 14px;
   font-weight: 400;
   fill: #393939;
@@ -67,7 +79,7 @@ svg path.TitlePath {
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Cairo', sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -97,7 +109,7 @@ body {
 #download {
   padding: 5px;
   font-size: 150%;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Cairo', sans-serif;
   float: right;
   margin: 5%;
   border: 1px solid black;
