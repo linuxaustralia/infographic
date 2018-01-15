@@ -39,7 +39,7 @@
 
 svg text, svg textPath {
   font-family: 'Cairo';
-  src: url('../fonts/Cairo-Medium.ttf');
+  src: url('../fonts/Cairo-Regular.ttf');
   font-weight: 300;
   font-style: normal;
 }
@@ -61,16 +61,16 @@ svg text.ExpensesLabels {
 }
 svg polyline.lines {
   stroke: #393939;
-  stroke-width: 0.9;
+  stroke-width: 0.2;
 }
 svg path {
   stroke: #000;
-  stroke-width: 1.7;
+  stroke-width: 1.2;
   fill: none;
 }
 svg path.pointer {
   stroke: #393939;
-  stroke-width: 1.7;
+  stroke-width: 1.2;
   fill: none;
 }
 svg path.TitlePath {

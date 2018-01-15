@@ -2,38 +2,29 @@
 
 var color = d3.scaleOrdinal()
     .range([
-      '#000000',
-      '#D6D6D8',
-      '#76CDCB',
       '#B1CF31',
-      '#FF711F',
-      '#FFDE00',
-      '#FF6657',
-      '#000000',
       '#D6D6D8',
-      '#76CDCB',
-      '#B1CF31',
-      '#FF711F',
-      '#FFDE00',
       '#FF6657',
-      '#fff'
+      '#76CDCB',
+      '#FFDE00',
+      '#FF711F'
       ])
     .domain([
-        'Face to face',
-        'Insurance',
-        'Merchant fees',
-        'Consulting accounting',
         'Donations',
         'Grants',
-        'Travel',
-        'Storage rental',
-        'Gift',
-        'Conference bid team review',
-        'Server',
-        'Printing and stationery',
+        'Face to face',
+        'Insurance',
         'Bank fees',
-        'Foreign currency losses',
-        'Subscriptions',
+        'Server',
+        'Merchant fees',
+        'Sponsorship',
+        'Travel',
+        'Consulting and accounting',
+        'Stationery',
+        'Gift',
+        'Storage rental',
+        'Advertising',
+        'Conf bid review',
         'Other'
     ]);
 
@@ -52,8 +43,8 @@ var annularYOffset  = 0; // how much to shift the annulars vertically from centr
 var annularWidth    = 150; // width of each annular
 var annularSpacing  = 15;
 var annularMargin   = 320; // margin between annulars and canvas
-var padAngle        = 0.025; // amount that each segment of an annular is padded
-var cornerRadius    = 5; // amount that the sectors are rounded
+var padAngle        = 0.02; // amount that each segment of an annular is padded
+var cornerRadius    = 20; // amount that the sectors are rounded
 
 var titleOffSet     = 22; // amount in pixels that the title arc inner and outer radii are offset from the dataset arc that they are labelling
 var titleRotationOffSet = -35; // amount in percent that the title is rotated from the 180 degree mark
@@ -66,13 +57,13 @@ var tipYOffSet = 0; // y offset for tooltip display in pixels
 
 /* Variables used with the labels */
 
-var labelPercentage = 0.95 // a value representing how far away from the outerArc the label is positioned
+var labelPercentage = 0.9 // a value representing how far away from the outerArc the label is positioned
 
 var labelcxOffset = 50;
 var labelxOffset  = 20;
 
-var labelcyOffset = 50;
-var labelyOffset  = 20;
+var labelcyOffset = 80;
+var labelyOffset  = 30;
 
 var markerSize = 2;
 var markerOpacity = 0.9;
@@ -112,7 +103,8 @@ var BaseSvg = d3.select('#visualisation').append('svg')
     .attr('width', width)
     .attr('height', height)
     .attr('id', 'BaseSvg')
-    .attr('transform', 'translate(' + (width / 2 - annularXOffset) + ',' + (height / 2 - annularYOffset) + ')');
+    .append('g')
+    .attr('transform', 'translate(' + (width / 2  - annularXOffset) + ',' + (height / 2  - annularYOffset) + ')');
 
 /*
   Layers for each annular
@@ -221,53 +213,25 @@ d3.csv('expenses.csv', ExpensesType, function(error, ExpensesData) {
     .attr('points', function (d){
 
       var a = d.startAngle + (d.endAngle - d.startAngle)/2 - Math.PI/2;
-      console.log('a is - ' + a);
 
       d.x = (Math.cos(a) * (radius * linePercentage));
-
-      console.log('d.x is - ' + d.x);
-
-
       d.y = (Math.sin(a) * (radius * linePercentage));
-      console.log('d.y is - ' + d.y);
 
-      var pos = radius * (a < Math.PI/2 ? 1 : -1);
-      console.log(pos);
+      // var pos = radius * (a < Math.PI/2 ? 1 : -1);
 
-  /*    return function(t) {
-                var d2 = interpolate(t);
-                var pos = outerArc.centroid(d2);
-                pos[0] = radius * 0.95 * (midAngle(d2) < Math.PI ? 1 : -1);
-
-                console.log('arc.centroid is - ' + arc.centroid[d2]);
-                console.log('outerArc.centroid(d2) is - ' + outerArc.centroid(d2));
-                console.log('pos - ' + pos);
-
-                return [arc.centroid(d2), outerArc.centroid(d2), pos];
-            }; */
-
-
-      return ExpensesArc.centroid(d) + ' ' + d.x + ' ' + d.y + ' ' + pos + ' ' + d.y;
+      return ExpensesArc.centroid(d) + ' ' + d.x + ' ' + d.y;
     })
 
 });
-
-
-
-
-
-
 
 /*
   Add a title to the donut chart around the bottom
 
   The positioning of the title is controlled by the variable
 
-
-
 */
 
-var ExpensesTitleText     = 'Linux Australia Non-Event Expenditure 1 October 2015 - 30 September 2016';
+var ExpensesTitleText     = 'Linux Australia Non-Event Expenditure 1 October 2016 - 30 September 2017';
 
 TitleLayer.append('path')
       .attr('d', ExpensesTitleArc)
