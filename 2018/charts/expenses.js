@@ -2,56 +2,46 @@
 
 var color = d3.scaleOrdinal()
     .range([
-      '#ffc100',
-      '#ff0000',
-      '#393939',
-      '#ffcd33',
-      '#ff3333',
-      '#616161',
-      '#ffda66',
-      '#ff6666',
-      '#888888',
-      '#ffe699',
-      '#ff9999',
-      '#b0b0b0',
-      '#fff3cc',
-      '#ffcccc',
-      '#fff'
-    ])
+      '#B1CF31',
+      '#D6D6D8',
+      '#FF6657',
+      '#76CDCB',
+      '#FFDE00',
+      '#FF711F'
+      ])
     .domain([
-      'Face to face',
-      'Insurance',
-      'Merchant fees',
-      'Consulting accounting',
-      'Donations',
-      'Grants',
-      'Travel',
-      'Storage rental',
-      'Gift',
-      'Conf bid review',
-      'Server',
-      'Stationery',
-      'Bank fees',
-      'Foreign currency losses',
-      'Other'
-  ])
+        'Infrastructure and platforms',
+        'Sponsorships, donations and grants',
+        'Operating account costs',
+        'Insurance',
+        'Advertising and marketing',
+        'Face to face',
+        'Bank fees',
+        'Ghosts and organiser gifts',
+        'Storage',
+        'Postage and printing',
+        'Awards and acknowledgements',
+        'GitHub and domains etc',
+        'Hardware'
+    ]);
 
-var ExpensesArcSequence = 0
 
-var widthModifier = 0.95
-var heightModifier = 0.95
+var ExpensesArcSequence = 0;
 
-var width = innerWidth * widthModifier
-var height = innerHeight * heightModifier
-var radius = Math.min(width, height) / 2
+var widthModifier = 0.95;
+var heightModifier = 0.95;
+
+var width = innerWidth * widthModifier,
+    height = innerHeight * heightModifier,
+    radius = Math.min(width, height) / 2;
 
 var annularXOffset  = 100; // how much to shift the annulars horizontally from centre
 var annularYOffset  = 0; // how much to shift the annulars vertically from centre
-var annularWidth    = 160; // width of each annular
+var annularWidth    = 150; // width of each annular
 var annularSpacing  = 15;
-var annularMargin   = 250; // margin between annulars and canvas
-var padAngle        = 0.025; // amount that each segment of an annular is padded
-var cornerRadius    = 5; // amount that the sectors are rounded
+var annularMargin   = 320; // margin between annulars and canvas
+var padAngle        = 0.02; // amount that each segment of an annular is padded
+var cornerRadius    = 20; // amount that the sectors are rounded
 
 var titleOffSet     = 22; // amount in pixels that the title arc inner and outer radii are offset from the dataset arc that they are labelling
 var titleRotationOffSet = -35; // amount in percent that the title is rotated from the 180 degree mark
@@ -63,15 +53,20 @@ var tipXOffSet = 0; // x offset for tooltip display in pixels
 var tipYOffSet = 0; // y offset for tooltip display in pixels
 
 /* Variables used with the labels */
-var labelPercentage = 0.6 // a value representing how far away from the outerArc the label is positioned
-var labelxOffset  = 10;
-var labelyOffset  = 20;
+
+var labelPercentage = 0.9 // a value representing how far away from the outerArc the label is positioned
+
+var labelcxOffset = 50;
+var labelxOffset  = 20;
+
+var labelcyOffset = 80;
+var labelyOffset  = 30;
 
 var markerSize = 2;
 var markerOpacity = 0.9;
 
 var lineOpacity = 0.7;
-var linePercentage = 0.95; // a value between 0 and 1 representing what percentage of the radius the label line is.
+var linePercentage = 0.9; // a value between 0 and 1 representing what percentage of the radius the label line is.
 
 /*
   Main Annular
@@ -105,7 +100,8 @@ var BaseSvg = d3.select('#visualisation').append('svg')
     .attr('width', width)
     .attr('height', height)
     .attr('id', 'BaseSvg')
-    .attr('transform', 'translate(' + (width / 2 - annularXOffset) + ',' + (height / 2 - annularYOffset) + ')');
+    .append('g')
+    .attr('transform', 'translate(' + (width / 2  - annularXOffset) + ',' + (height / 2  - annularYOffset) + ')');
 
 /*
   Layers for each annular
@@ -156,24 +152,18 @@ d3.csv('expenses.csv', ExpensesType, function(error, ExpensesData) {
 
     ExpensesLabels.data(ExpensesPie(ExpensesData))
     .enter().append('text')
-
-    .attr('text-anchor', function(d){
-      var a = midAngle(d);
-      var pos = radius * (a < Math.PI/2 ? 1 : -1);
-      return (pos < 0 ? 'end' : 'start');
-    })
-
+    .attr('text-anchor', 'middle')
     .attr('x', function(d) {
-        var a = midAngle(d);
-        var pos = radius * (a < Math.PI/2 ? 1 : -1);
-        var offset = (pos > 0 ? labelxOffset : (labelxOffset * -1));
-        return d.x = Math.cos(a) * (radius * linePercentage) + offset;
+        var a = d.startAngle + (d.endAngle - d.startAngle)/2 - Math.PI/2;
+        d.cx = Math.cos(a) * (radius - labelcxOffset);
+        return d.x = Math.cos(a) * (radius - labelxOffset);
     })
     .attr('y', function(d) {
-        var a = midAngle(d);
-        return d.y = Math.sin(a) * (radius * linePercentage);
+        var a = d.startAngle + (d.endAngle - d.startAngle)/2 - Math.PI/2;
+        d.cy = Math.sin(a) * (radius - labelcyOffset);
+        return d.y = Math.sin(a) * (radius - labelyOffset);
     })
-    .text(function(d) { return '  ' + d.data.Account + ' - ' + d3.format('$d')(d.data.Value) + '  '; })
+    .text(function(d) { return d.data.Account + ' - ' + d3.format('$d')(d.data.Value); })
     .attr('class', 'ExpensesLabels')
     .each(function(d) {
         var bbox = this.getBBox();
@@ -191,6 +181,7 @@ d3.csv('expenses.csv', ExpensesType, function(error, ExpensesData) {
     .append('marker')
     .attr('class', 'marker')
     .attr('id', 'marker')
+
     .attr('markerWidth', '12')
     .attr('markerHeight', '12')
     .attr('orient', 'auto')
@@ -217,30 +208,27 @@ d3.csv('expenses.csv', ExpensesType, function(error, ExpensesData) {
     .style('opacity', lineOpacity)
 
     .attr('points', function (d){
-      var a = midAngle(d);
+
+      var a = d.startAngle + (d.endAngle - d.startAngle)/2 - Math.PI/2;
+
       d.x = (Math.cos(a) * (radius * linePercentage));
       d.y = (Math.sin(a) * (radius * linePercentage));
+
+      // var pos = radius * (a < Math.PI/2 ? 1 : -1);
+
       return ExpensesArc.centroid(d) + ' ' + d.x + ' ' + d.y;
     })
 
 });
-
-
-
-
-
-
 
 /*
   Add a title to the donut chart around the bottom
 
   The positioning of the title is controlled by the variable
 
-
-
 */
 
-var ExpensesTitleText     = 'Linux Australia Non-Event Expenditure 1 October 2015 - 30 September 2016';
+var ExpensesTitleText     = 'Linux Australia Non-Event Expenditure 1 October 2017 - 30 September 2018';
 
 TitleLayer.append('path')
       .attr('d', ExpensesTitleArc)
@@ -265,5 +253,30 @@ function ExpensesType(d) {
 }
 
 function midAngle(d){
-    return d.startAngle + (d.endAngle - d.startAngle)/2 - Math.PI/2;
+    return d.startAngle + (d.endAngle - d.startAngle)/2;
+}
+
+function wrap(text, width) {
+  text.each(function() {
+    var text = d3.select(this),
+        words = text.text().split(/\s+/).reverse(),
+        word,
+        line = [],
+        lineNumber = 0,
+        lineHeight = 1.1, // ems
+        y = text.attr('y'),
+        dy = parseFloat(text.attr('dy')),
+        tspan = text.text(null).append('tspan').attr('x', 0).attr('y', y).attr('dy', dy + 'em');
+    while (word = words.pop()) {
+      line.push(word);
+      tspan.text(line.join(' '));
+      if (tspan.node().getComputedTextLength() > width) {
+        line.pop();
+        tspan.text(line.join(' '));
+        line = [word];
+        tspan = text.append('tspan').attr('x', 0).attr('y', y).attr('dy', ++lineNumber * lineHeight + dy + 'em').text(word);
+      }
+    }
+  });
+
 }

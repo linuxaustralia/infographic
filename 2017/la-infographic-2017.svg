@@ -1,0 +1,739 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   id="BaseSvg"
+   version="1.1"
+   sodipodi:docname="la-infographic-2017.svg"
+   inkscape:version="0.92.2 (unknown)">
+  <metadata
+     id="metadata1348">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs1346">
+    <defs
+       id="defs1215">
+      <marker
+         class="marker"
+         id="marker"
+         markerWidth="12"
+         markerHeight="12"
+         orient="auto"
+         refX="2"
+         refY="2">
+        <circle
+           cx="2"
+           cy="2"
+           r="2"
+           style="overflow:visible;opacity:0.9"
+           id="circle1212" />
+      </marker>
+    </defs>
+    <defs
+       id="defs1221">
+      <marker
+         class="marker"
+         id="marker1219"
+         markerWidth="12"
+         markerHeight="12"
+         orient="auto"
+         refX="2"
+         refY="2">
+        <circle
+           cx="2"
+           cy="2"
+           r="2"
+           style="overflow:visible;opacity:0.9"
+           id="circle1217" />
+      </marker>
+    </defs>
+    <defs
+       id="defs1227">
+      <marker
+         class="marker"
+         id="marker1225"
+         markerWidth="12"
+         markerHeight="12"
+         orient="auto"
+         refX="2"
+         refY="2">
+        <circle
+           cx="2"
+           cy="2"
+           r="2"
+           style="overflow:visible;opacity:0.9"
+           id="circle1223" />
+      </marker>
+    </defs>
+    <defs
+       id="defs1233">
+      <marker
+         class="marker"
+         id="marker1231"
+         markerWidth="12"
+         markerHeight="12"
+         orient="auto"
+         refX="2"
+         refY="2">
+        <circle
+           cx="2"
+           cy="2"
+           r="2"
+           style="overflow:visible;opacity:0.9"
+           id="circle1229" />
+      </marker>
+    </defs>
+    <defs
+       id="defs1239">
+      <marker
+         class="marker"
+         id="marker1237"
+         markerWidth="12"
+         markerHeight="12"
+         orient="auto"
+         refX="2"
+         refY="2">
+        <circle
+           cx="2"
+           cy="2"
+           r="2"
+           style="overflow:visible;opacity:0.9"
+           id="circle1235" />
+      </marker>
+    </defs>
+    <defs
+       id="defs1245">
+      <marker
+         class="marker"
+         id="marker1243"
+         markerWidth="12"
+         markerHeight="12"
+         orient="auto"
+         refX="2"
+         refY="2">
+        <circle
+           cx="2"
+           cy="2"
+           r="2"
+           style="overflow:visible;opacity:0.9"
+           id="circle1241" />
+      </marker>
+    </defs>
+    <defs
+       id="defs1251">
+      <marker
+         class="marker"
+         id="marker1249"
+         markerWidth="12"
+         markerHeight="12"
+         orient="auto"
+         refX="2"
+         refY="2">
+        <circle
+           cx="2"
+           cy="2"
+           r="2"
+           style="overflow:visible;opacity:0.9"
+           id="circle1247" />
+      </marker>
+    </defs>
+    <defs
+       id="defs1257">
+      <marker
+         class="marker"
+         id="marker1255"
+         markerWidth="12"
+         markerHeight="12"
+         orient="auto"
+         refX="2"
+         refY="2">
+        <circle
+           cx="2"
+           cy="2"
+           r="2"
+           style="overflow:visible;opacity:0.9"
+           id="circle1253" />
+      </marker>
+    </defs>
+    <defs
+       id="defs1263">
+      <marker
+         class="marker"
+         id="marker1261"
+         markerWidth="12"
+         markerHeight="12"
+         orient="auto"
+         refX="2"
+         refY="2">
+        <circle
+           cx="2"
+           cy="2"
+           r="2"
+           style="overflow:visible;opacity:0.9"
+           id="circle1259" />
+      </marker>
+    </defs>
+    <defs
+       id="defs1269">
+      <marker
+         class="marker"
+         id="marker1267"
+         markerWidth="12"
+         markerHeight="12"
+         orient="auto"
+         refX="2"
+         refY="2">
+        <circle
+           cx="2"
+           cy="2"
+           r="2"
+           style="overflow:visible;opacity:0.9"
+           id="circle1265" />
+      </marker>
+    </defs>
+    <defs
+       id="defs1275">
+      <marker
+         class="marker"
+         id="marker1273"
+         markerWidth="12"
+         markerHeight="12"
+         orient="auto"
+         refX="2"
+         refY="2">
+        <circle
+           cx="2"
+           cy="2"
+           r="2"
+           style="overflow:visible;opacity:0.9"
+           id="circle1271" />
+      </marker>
+    </defs>
+    <defs
+       id="defs1281">
+      <marker
+         class="marker"
+         id="marker1279"
+         markerWidth="12"
+         markerHeight="12"
+         orient="auto"
+         refX="2"
+         refY="2">
+        <circle
+           cx="2"
+           cy="2"
+           r="2"
+           style="overflow:visible;opacity:0.9"
+           id="circle1277" />
+      </marker>
+    </defs>
+    <defs
+       id="defs1287">
+      <marker
+         class="marker"
+         id="marker1285"
+         markerWidth="12"
+         markerHeight="12"
+         orient="auto"
+         refX="2"
+         refY="2">
+        <circle
+           cx="2"
+           cy="2"
+           r="2"
+           style="overflow:visible;opacity:0.9"
+           id="circle1283" />
+      </marker>
+    </defs>
+    <defs
+       id="defs1293">
+      <marker
+         class="marker"
+         id="marker1291"
+         markerWidth="12"
+         markerHeight="12"
+         orient="auto"
+         refX="2"
+         refY="2">
+        <circle
+           cx="2"
+           cy="2"
+           r="2"
+           style="overflow:visible;opacity:0.9"
+           id="circle1289" />
+      </marker>
+    </defs>
+    <defs
+       id="defs1299">
+      <marker
+         class="marker"
+         id="marker1297"
+         markerWidth="12"
+         markerHeight="12"
+         orient="auto"
+         refX="2"
+         refY="2">
+        <circle
+           cx="2"
+           cy="2"
+           r="2"
+           style="overflow:visible;opacity:0.9"
+           id="circle1295" />
+      </marker>
+    </defs>
+    <defs
+       id="defs1305">
+      <marker
+         class="marker"
+         id="marker1303"
+         markerWidth="12"
+         markerHeight="12"
+         orient="auto"
+         refX="2"
+         refY="2">
+        <circle
+           cx="2"
+           cy="2"
+           r="2"
+           style="overflow:visible;opacity:0.9"
+           id="circle1301" />
+      </marker>
+    </defs>
+  </defs>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1056"
+     id="namedview1344"
+     showgrid="false"
+     inkscape:zoom="0.81378605"
+     inkscape:cx="397.70078"
+     inkscape:cy="428.81037"
+     inkscape:window-x="1920"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="BaseSvg"
+     units="mm" />
+  <g
+     id="g2026">
+    <g
+       transform="matrix(0.78423286,0,0,0.78423286,396.4197,590.60911)"
+       style="overflow:visible"
+       id="g1172">
+      <g
+         class="ExpensesArc"
+         style="overflow:visible"
+         id="g1110">
+        <path
+           d="m 3.1262301,-261.93106 a 20,20 0 0 1 21.7589829,-19.9225 282.95,282.95 0 0 1 237.307827,175.47917 20,20 0 0 1 -12.67294,26.641239 L 143.64044,-47.287182 A 20,20 0 0 1 119.76415,-57.725655 132.95,132.95 0 0 0 20.102205,-131.42147 20,20 0 0 1 3.1262301,-151.19153 Z"
+           class="ExpensesArcPath"
+           style="overflow:visible;fill:#b1cf31;stroke:#000000;stroke-width:1.20000005"
+           id="path1108"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         class="ExpensesArc"
+         style="overflow:visible"
+         id="g1114">
+        <path
+           d="m 251.35203,-73.755084 a 20,20 0 0 1 25.42343,14.966914 282.95,282.95 0 0 1 -40.11703,213.88005 20,20 0 0 1 -29.11916,4.73648 L 120.61445,91.218458 a 20,20 0 0 1 -5.00082,-25.574025 132.95,132.95 0 0 0 15.93015,-84.930072 20,20 0 0 1 13.92859,-22.023475 z"
+           class="ExpensesArcPath"
+           style="overflow:visible;fill:#d6d6d8;stroke:#000000;stroke-width:1.20000005"
+           id="path1112"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         class="ExpensesArc"
+         style="overflow:visible"
+         id="g1118">
+        <path
+           d="M 203.66549,164.73622 A 20,20 0 0 1 205.82261,194.1591 282.95,282.95 0 0 1 72.376809,273.53665 20,20 0 0 1 47.551294,257.59761 L 28.750024,148.46579 A 20,20 0 0 1 42.122999,126.10058 132.95,132.95 0 0 0 90.70454,97.202823 20,20 0 0 1 116.74067,96.126317 Z"
+           class="ExpensesArcPath"
+           style="overflow:visible;fill:#ff6657;stroke:#000000;stroke-width:1.20000005"
+           id="path1116"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         class="ExpensesArc"
+         style="overflow:visible"
+         id="g1122">
+        <path
+           d="m 41.389606,258.65915 a 20,20 0 0 1 -18.060663,23.32749 282.95,282.95 0 0 1 -81.847329,-5.15402 20,20 0 0 1 -14.991685,-25.40883 l 32.34276,-105.91123 a 20,20 0 0 1 22.009889,-13.95004 132.95,132.95 0 0 0 21.6596929,1.36393 20,20 0 0 1 20.0860651,16.60087 z"
+           class="ExpensesArcPath"
+           style="overflow:visible;fill:#76cdcb;stroke:#000000;stroke-width:1.20000005"
+           id="path1120"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         class="ExpensesArc"
+         style="overflow:visible"
+         id="g1126">
+        <path
+           d="m -79.489921,249.59769 a 20,20 0 0 1 -26.628879,12.6989 282.95,282.95 0 0 1 -65.59446,-37.40715 20,20 0 0 1 -2.62963,-29.38443 l 74.684781,-81.76445 a 20,20 0 0 1 25.867493,-3.1483 132.95,132.95 0 0 0 16.181715,9.22809 20,20 0 0 1 10.46174,23.86611 z"
+           class="ExpensesArcPath"
+           style="overflow:visible;fill:#ffde00;stroke:#000000;stroke-width:1.20000005"
+           id="path1124"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         class="ExpensesArc"
+         style="overflow:visible"
+         id="g1130">
+        <path
+           d="m -178.95939,191.28824 a 20,20 0 0 1 -29.50183,0.0351 282.95,282.95 0 0 1 -37.17138,-50.87646 20,20 0 0 1 9.0004,-28.09542 l 100.59624,-46.299438 a 20,20 0 0 1 25.05674,7.155318 132.95,132.95 0 0 0 7.5037,10.270312 20,20 0 0 1 -0.79909,26.046118 z"
+           class="ExpensesArcPath"
+           style="overflow:visible;fill:#ff711f;stroke:#000000;stroke-width:1.20000005"
+           id="path1128"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         class="ExpensesArc"
+         style="overflow:visible"
+         id="g1134">
+        <path
+           d="m -239.24631,106.67171 a 20,20 0 0 1 -27.19497,-11.436486 282.95,282.95 0 0 1 -13.74403,-55.777727 20,20 0 0 1 18.76818,-22.762137 l 110.59073,-5.738549 a 20,20 0 0 1 20.6232,15.928678 132.95,132.95 0 0 0 2.41479,9.800009 20,20 0 0 1 -10.86166,23.686773 z"
+           class="ExpensesArcPath"
+           style="overflow:visible;fill:#b1cf31;stroke:#000000;stroke-width:1.20000005"
+           id="path1132"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         class="ExpensesArc"
+         style="overflow:visible"
+         id="g1138">
+        <path
+           d="m -261.74114,10.4513 a 20,20 0 0 1 -21.02329,-20.697359 282.95,282.95 0 0 1 3.5252,-35.428393 20,20 0 0 1 24.68956,-16.148838 l 107.40478,27.447214 a 19.86397,19.86397 0 0 1 -3.88882,39.0827725 z"
+           class="ExpensesArcPath"
+           style="overflow:visible;fill:#d6d6d8;stroke:#000000;stroke-width:1.20000005"
+           id="path1136"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         class="ExpensesArc"
+         style="overflow:visible"
+         id="g1142">
+        <path
+           d="m -253.00161,-67.881075 a 20,20 0 0 1 -13.91483,-26.014163 282.95,282.95 0 0 1 10.19601,-25.080902 20,20 0 0 1 28.11902,-8.92635 l 98.07272,56.41897 a 17.223079,17.223079 0 0 1 -12.85262,31.615833 z"
+           class="ExpensesArcPath"
+           style="overflow:visible;fill:#ff6657;stroke:#000000;stroke-width:1.20000005"
+           id="path1140"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         class="ExpensesArc"
+         style="overflow:visible"
+         id="g1146">
+        <path
+           d="m -225.48361,-133.32214 a 20,20 0 0 1 -6.41873,-28.79513 282.95,282.95 0 0 1 9.75396,-13.1277 20,20 0 0 1 29.4223,-2.16504 l 84.37222,79.548093 a 14.025978,14.025978 0 0 1 -16.61589,22.363079 z"
+           class="ExpensesArcPath"
+           style="overflow:visible;fill:#76cdcb;stroke:#000000;stroke-width:1.20000005"
+           id="path1144"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         class="ExpensesArc"
+         style="overflow:visible"
+         id="g1150">
+        <path
+           d="m -188.43689,-181.95931 a 20,20 0 0 1 0.43101,-29.49871 282.95,282.95 0 0 1 3.13391,-2.74529 20,20 0 0 1 29.29878,3.45551 l 69.578304,96.64756 a 10.546153,10.546153 0 0 1 -15.793554,13.8351 z"
+           class="ExpensesArcPath"
+           style="overflow:visible;fill:#ffde00;stroke:#000000;stroke-width:1.20000005"
+           id="path1148"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         class="ExpensesArc"
+         style="overflow:visible"
+         id="g1154">
+        <path
+           d="m -150.4989,-214.40087 a 20,20 0 0 1 6.01891,-28.88134 282.95,282.95 0 0 1 3.50385,-2.04702 20,20 0 0 1 28.11475,8.9398 l 50.034432,108.09713 a 10.515939,10.515939 0 0 1 -18.077599,10.56128 z"
+           class="ExpensesArcPath"
+           style="overflow:visible;fill:#ff711f;stroke:#000000;stroke-width:1.20000005"
+           id="path1152"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         class="ExpensesArc"
+         style="overflow:visible"
+         id="g1158">
+        <path
+           d="m -108.35066,-241.52922 a 17.450724,17.450724 0 1 1 32.615638,-12.12494 l 34.178246,119.60564 a 7.7808109,7.7808109 0 0 1 -14.542441,5.40619 z"
+           class="ExpensesArcPath"
+           style="overflow:visible;fill:#b1cf31;stroke:#000000;stroke-width:1.20000005"
+           id="path1156"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         class="ExpensesArc"
+         style="overflow:visible"
+         id="g1162">
+        <path
+           d="m -72.714789,-265.84105 a 7.1690628,7.1690628 0 1 1 13.914046,-3.41975 l 28.482421,137.91406 a 1.9082181,1.9082181 0 0 1 -3.703557,0.91025 z"
+           class="ExpensesArcPath"
+           style="overflow:visible;fill:#d6d6d8;stroke:#000000;stroke-width:1.20000005"
+           id="path1160"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         class="ExpensesArc"
+         style="overflow:visible"
+         id="g1166">
+        <path
+           d="m -53.747546,-275.66043 a 2.077174,2.077174 0 1 1 4.08293,-0.76479 l 25.187213,145.74791 z"
+           class="ExpensesArcPath"
+           style="overflow:visible;fill:#ff6657;stroke:#000000;stroke-width:1.20000005"
+           id="path1164"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         class="ExpensesArc"
+         style="overflow:visible"
+         id="g1170">
+        <path
+           d="m -40.578613,-260.04824 a 18.856848,18.856848 0 1 1 37.4523829,-3.12839 v 122.0566 a 8.6614912,8.6614912 0 0 1 -17.2029539,1.43695 z"
+           class="ExpensesArcPath"
+           style="overflow:visible;fill:#76cdcb;stroke:#000000;stroke-width:1.20000005"
+           id="path1168"
+           inkscape:connector-curvature="0" />
+      </g>
+    </g>
+    <g
+       transform="matrix(0.78423286,0,0,0.78423286,396.4197,590.60911)"
+       style="overflow:visible"
+       id="g1178">
+      <path
+         d="M -271.71244,138.4444 A 304.95,304.95 0 1 0 0,-304.95 v 194 A 110.95,110.95 0 1 1 -98.857174,50.370246 Z"
+         id="ExpensesTitle"
+         class="TitlePath"
+         style="overflow:visible;fill:none;stroke-width:1.20000005"
+         inkscape:connector-curvature="0" />
+      <text
+         id="ExpensesTitleText"
+         style="font-weight:200;font-size:30px;line-height:58px;font-family:Cairo;overflow:visible">
+        <textPath
+           xlink:href="#ExpensesTitle"
+           class="ExpensesTitle"
+           style="font-weight:700;font-size:24px;line-height:46px;font-family:Cairo;overflow:visible;fill:#393939"
+           id="textPath1175">Linux Australia Non-Event Expenditure 1 October 2016 - 30 September 2017</textPath>
+      </text>
+    </g>
+    <text
+       id="text1180"
+       style="font-size:10.97926044px;line-height:21.1742878px;font-family:Cairo;text-anchor:middle;overflow:visible;fill:#393939;stroke-width:0.78423285"
+       class="ExpensesLabels"
+       y="333.37109"
+       x="591.29913">Donations - $16433</text>
+    <text
+       id="text1182"
+       style="font-size:10.97926044px;line-height:21.1742878px;font-family:Cairo;text-anchor:middle;overflow:visible;fill:#393939;stroke-width:0.78423285"
+       class="ExpensesLabels"
+       y="661.58875"
+       x="718.5719">Grants - $12460</text>
+    <text
+       id="text1184"
+       style="font-size:10.97926044px;line-height:21.1742878px;font-family:Cairo;text-anchor:middle;overflow:visible;fill:#393939;stroke-width:0.78423285"
+       class="ExpensesLabels"
+       y="865.57013"
+       x="563.98389">Face to face - $9446</text>
+    <text
+       id="text1186"
+       style="font-size:10.97926044px;line-height:21.1742878px;font-family:Cairo;text-anchor:middle;overflow:visible;fill:#393939;stroke-width:0.78423285"
+       class="ExpensesLabels"
+       y="909.90448"
+       x="375.82047">Insurance - $6026</text>
+    <text
+       id="text1188"
+       style="font-size:10.97926044px;line-height:21.1742878px;font-family:Cairo;text-anchor:middle;overflow:visible;fill:#393939;stroke-width:0.78423285"
+       class="ExpensesLabels"
+       y="868.52173"
+       x="234.04694">Bank fees - $5727</text>
+    <text
+       id="text1190"
+       style="font-size:10.97926044px;line-height:21.1742878px;font-family:Cairo;text-anchor:middle;overflow:visible;fill:#393939;stroke-width:0.78423285"
+       class="ExpensesLabels"
+       y="779.34674"
+       x="131.76227">Server - $5153</text>
+    <text
+       id="text1192"
+       style="font-size:10.97926044px;line-height:21.1742878px;font-family:Cairo;text-anchor:middle;overflow:visible;fill:#393939;stroke-width:0.78423285"
+       class="ExpensesLabels"
+       y="667.15216"
+       x="78.168755">Merchant fees - $4897</text>
+    <text
+       id="text1194"
+       style="font-size:10.97926044px;line-height:21.1742878px;font-family:Cairo;text-anchor:middle;overflow:visible;fill:#393939;stroke-width:0.78423285"
+       class="ExpensesLabels"
+       y="558.93207"
+       x="70.260201">Sponsorship - $3898</text>
+    <text
+       id="text1196"
+       style="font-size:10.97926044px;line-height:21.1742878px;font-family:Cairo;text-anchor:middle;overflow:visible;fill:#393939;stroke-width:0.78423285"
+       class="ExpensesLabels"
+       y="470.12573"
+       x="92.780739">Travel - $3508</text>
+    <text
+       id="text1198"
+       style="font-size:10.97926044px;line-height:21.1742878px;font-family:Cairo;text-anchor:middle;overflow:visible;fill:#393939;stroke-width:0.78423285"
+       class="ExpensesLabels"
+       y="399.80392"
+       x="133.32295">Consulting and accounting - $3019</text>
+    <text
+       id="text1200"
+       style="font-size:10.97926044px;line-height:21.1742878px;font-family:Cairo;text-anchor:middle;overflow:visible;fill:#393939;stroke-width:0.78423285"
+       class="ExpensesLabels"
+       y="349.95779"
+       x="180.44243">Stationery - $2463</text>
+    <text
+       id="text1202"
+       style="font-size:10.97926044px;line-height:21.1742878px;font-family:Cairo;text-anchor:middle;overflow:visible;fill:#393939;stroke-width:0.78423285"
+       class="ExpensesLabels"
+       y="314.36877"
+       x="201.07883">Gift - $2458</text>
+    <text
+       id="text1204"
+       style="font-size:10.97926044px;line-height:21.1742878px;font-family:Cairo;text-anchor:middle;overflow:visible;fill:#393939;stroke-width:0.78423285"
+       class="ExpensesLabels"
+       y="290.73242"
+       x="230.20709">Storage rental - $2002</text>
+    <text
+       id="text1206"
+       style="font-size:10.97926044px;line-height:21.1742878px;font-family:Cairo;text-anchor:middle;overflow:visible;fill:#393939;stroke-width:0.78423285"
+       class="ExpensesLabels"
+       y="271.92728"
+       x="296.18961">Advertising - $964</text>
+    <text
+       id="text1208"
+       style="font-size:10.97926044px;line-height:21.1742878px;font-family:Cairo;text-anchor:middle;overflow:visible;fill:#393939;stroke-width:0.78423285"
+       class="ExpensesLabels"
+       y="256.15027"
+       x="336.07401">Conf bid review - $477</text>
+    <text
+       id="text1210"
+       style="font-size:10.97926044px;line-height:21.1742878px;font-family:Cairo;text-anchor:middle;overflow:visible;fill:#393939;stroke-width:0.78423285"
+       class="ExpensesLabels"
+       y="271.7916"
+       x="405.13617">Other - $2151</text>
+    <polyline
+       transform="matrix(0.78423286,0,0,0.78423286,396.4197,590.60911)"
+       id="polyline1307"
+       points="123.63903523667656,-167.2022471910705 234.34933365574537 -316.920421936025"
+       style="overflow:visible;opacity:0.7;fill:none;stroke:#000000;stroke-width:2;marker-start:url(#marker)" />
+    <polyline
+       transform="matrix(0.78423286,0,0,0.78423286,396.4197,590.60911)"
+       id="polyline1309"
+       points="204.38575746654504,38.33620540463828 387.3992220929361 72.66365492313152"
+       style="overflow:visible;opacity:0.7;fill:none;stroke:#000000;stroke-width:2;marker-start:url(#marker)" />
+    <polyline
+       transform="matrix(0.78423286,0,0,0.78423286,396.4197,590.60911)"
+       id="polyline1311"
+       points="106.30919598639294,178.7220113716458 201.5018088195081 338.75534692085137"
+       style="overflow:visible;opacity:0.7;fill:none;stroke:#000000;stroke-width:2;marker-start:url(#marker)" />
+    <polyline
+       transform="matrix(0.78423286,0,0,0.78423286,396.4197,590.60911)"
+       id="polyline1313"
+       points="-13.068946653808375,207.53892438133119 -24.771294389669823 393.3758342847973"
+       style="overflow:visible;opacity:0.7;fill:none;stroke:#000000;stroke-width:2;marker-start:url(#marker)" />
+    <polyline
+       transform="matrix(0.78423286,0,0,0.78423286,396.4197,590.60911)"
+       id="polyline1315"
+       points="-103.01553609392097,180.64053206100246 -195.25890179898735 342.39177164945625"
+       style="overflow:visible;opacity:0.7;fill:none;stroke:#000000;stroke-width:2;marker-start:url(#marker)" />
+    <polyline
+       transform="matrix(0.78423286,0,0,0.78423286,396.4197,590.60911)"
+       id="polyline1317"
+       points="-167.90888379771306,122.67766398903298 -318.25980328582637 232.52712021927047"
+       style="overflow:visible;opacity:0.7;fill:none;stroke:#000000;stroke-width:2;marker-start:url(#marker)" />
+    <polyline
+       transform="matrix(0.78423286,0,0,0.78423286,396.4197,590.60911)"
+       id="polyline1319"
+       points="-201.91066623257538,49.75223976382908 -382.70785596970785 94.30196712725198"
+       style="overflow:visible;opacity:0.7;fill:none;stroke:#000000;stroke-width:2;marker-start:url(#marker)" />
+    <polyline
+       transform="matrix(0.78423286,0,0,0.78423286,396.4197,590.60911)"
+       id="polyline1321"
+       points="-206.92816069323723,-20.589774455146205 -392.2181734938346 -39.02650901836092"
+       style="overflow:visible;opacity:0.7;fill:none;stroke:#000000;stroke-width:2;marker-start:url(#marker)" />
+    <polyline
+       transform="matrix(0.78423286,0,0,0.78423286,396.4197,590.60911)"
+       id="polyline1323"
+       points="-192.64026015610196,-78.3130427642123 -365.1364354019157 -148.43701548799277"
+       style="overflow:visible;opacity:0.7;fill:none;stroke:#000000;stroke-width:2;marker-start:url(#marker)" />
+    <polyline
+       transform="matrix(0.78423286,0,0,0.78423286,396.4197,590.60911)"
+       id="polyline1325"
+       points="-166.91871796609345,-124.02154688825546 -316.3830116851434 -235.07435832527207"
+       style="overflow:visible;opacity:0.7;fill:none;stroke:#000000;stroke-width:2;marker-start:url(#marker)" />
+    <polyline
+       transform="matrix(0.78423286,0,0,0.78423286,396.4197,590.60911)"
+       id="polyline1327"
+       points="-137.02429786001835,-156.42104812322722 -259.7201833277977 -296.4853966001954"
+       style="overflow:visible;opacity:0.7;fill:none;stroke:#000000;stroke-width:2;marker-start:url(#marker)" />
+    <polyline
+       transform="matrix(0.78423286,0,0,0.78423286,396.4197,590.60911)"
+       id="polyline1329"
+       points="-104.89861742601799,-179.55356460429826 -198.82815365016648 -340.33149919022446"
+       style="overflow:visible;opacity:0.7;fill:none;stroke:#000000;stroke-width:2;marker-start:url(#marker)" />
+    <polyline
+       transform="matrix(0.78423286,0,0,0.78423286,396.4197,590.60911)"
+       id="polyline1331"
+       points="-72.46087895992906,-194.9169657068222 -137.34463931931157 -369.45177503328927"
+       style="overflow:visible;opacity:0.7;fill:none;stroke:#000000;stroke-width:2;marker-start:url(#marker)" />
+    <polyline
+       transform="matrix(0.78423286,0,0,0.78423286,396.4197,590.60911)"
+       id="polyline1333"
+       points="-49.632185400101434,-201.940210637728 -94.07441229322906 -382.763855368664"
+       style="overflow:visible;opacity:0.7;fill:none;stroke:#000000;stroke-width:2;marker-start:url(#marker)" />
+    <polyline
+       transform="matrix(0.78423286,0,0,0.78423286,396.4197,590.60911)"
+       id="polyline1335"
+       points="-38.28564138254988,-204.39523517911758 -72.56781427813874 -387.41718644878614"
+       style="overflow:visible;opacity:0.7;fill:none;stroke:#000000;stroke-width:2;marker-start:url(#marker)" />
+    <polyline
+       transform="matrix(0.78423286,0,0,0.78423286,396.4197,590.60911)"
+       id="polyline1337"
+       points="-17.30972982613879,-207.2283179330134 -32.80940879837333 -392.7871010093142"
+       style="overflow:visible;opacity:0.7;fill:none;stroke:#000000;stroke-width:2;marker-start:url(#marker)" />
+    <flowRoot
+       transform="matrix(2.5195732,0,0,2.5195732,-630.38928,-1921.7906)"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:100%;font-family:Rachana;-inkscape-font-specification:Rachana;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+       id="flowRoot1939"
+       xml:space="preserve"><flowRegion
+         style="line-height:100%;"
+         id="flowRegion1941"><rect
+           style="line-height:100%;"
+           y="970.14545"
+           x="292.46017"
+           height="117.96712"
+           width="226.10365"
+           id="rect1943" /></flowRegion><flowPara
+         style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-family:Cairo;-inkscape-font-specification:'Cairo Heavy';text-align:center;text-anchor:middle;line-height:100%;font-size:21.16760622px"
+         id="flowPara1945">$81k</flowPara><flowPara
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Cairo;-inkscape-font-specification:Cairo;text-align:center;text-anchor:middle;line-height:100%;"
+         id="flowPara1947">non-event</flowPara><flowPara
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Cairo;-inkscape-font-specification:Cairo;text-align:center;text-anchor:middle;line-height:100%;"
+         id="flowPara1949">spending</flowPara></flowRoot>  </g>
+</svg>
