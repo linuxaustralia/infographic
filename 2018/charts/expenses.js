@@ -10,22 +10,19 @@ var color = d3.scaleOrdinal()
       '#FF711F'
       ])
     .domain([
-        'Donations',
-        'Grants',
-        'Face to face',
+        'Infrastructure and platforms',
+        'Sponsorships, donations and grants',
+        'Operating account costs',
         'Insurance',
+        'Advertising and marketing',
+        'Face to face',
         'Bank fees',
-        'Server',
-        'Merchant fees',
-        'Sponsorship',
-        'Travel',
-        'Consulting and accounting',
-        'Stationery',
-        'Gift',
-        'Storage rental',
-        'Advertising',
-        'Conf bid review',
-        'Other'
+        'Ghosts and organiser gifts',
+        'Storage',
+        'Postage and printing',
+        'Awards and acknowledgements',
+        'GitHub and domains etc',
+        'Hardware'
     ]);
 
 
@@ -231,7 +228,7 @@ d3.csv('expenses.csv', ExpensesType, function(error, ExpensesData) {
 
 */
 
-var ExpensesTitleText     = 'Linux Australia Non-Event Expenditure 1 October 2016 - 30 September 2017';
+var ExpensesTitleText     = 'Linux Australia Non-Event Expenditure 1 October 2017 - 30 September 2018';
 
 TitleLayer.append('path')
       .attr('d', ExpensesTitleArc)
