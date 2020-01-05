@@ -1,0 +1,149 @@
+@font-face {
+  font-family: 'Cairo';
+  src: url('../fonts/Cairo-Black.ttf');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Cairo';
+  src: url('../fonts/Cairo-Bold.ttf');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Cairo';
+  src: url('../fonts/Cairo-SemiBold.ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Cairo';
+  src: url('../fonts/Cairo-Regular.ttf');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Cairo';
+  src: url('../fonts/Cairo-Light.ttf');
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Cairo';
+  src: url('../fonts/Cairo-ExtraLight.ttf');
+  font-weight: 100;
+  font-style: normal;
+}
+
+/* d3-save-svg doesn't support any CSS styles that occur outside the svg, for instance the body element, which then cascades, or font-face. So, fonts, and any rules that occur higher in the CSS hierarchy than svg have to be redefined if you want them to be exported to the downloadable svg file */
+
+svg text, svg textPath {
+  font-family: 'Cairo';
+  src: url('../fonts/Cairo-Regular.ttf');
+  font-weight: 300;
+  font-style: normal;
+}
+svg text {
+  font-size: 30px;
+  font-weight: 200;
+}
+svg textPath.ExpensesTitle {
+  src: url('../fonts/Cairo-Bold.ttf');
+  font-weight: 700;
+  font-size: 24px;
+  fill: #393939;
+}
+svg text.ExpensesLabels {
+  src: url('../fonts/Cairo-SemiBold.ttf');
+  font-size: 14px;
+  font-weight: 400;
+  fill: #393939;
+}
+svg polyline.lines {
+  stroke: #393939;
+  stroke-width: 0.2;
+}
+svg path {
+  stroke: #000;
+  stroke-width: 1.2;
+  fill: none;
+}
+svg path.pointer {
+  stroke: #393939;
+  stroke-width: 1.2;
+  fill: none;
+}
+svg path.TitlePath {
+  stroke: none;
+  fill: none;
+}
+
+body {
+  font-family: 'Cairo', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#wrapper {
+  width: 100%;
+  top: 0;
+  position: absolute;
+}
+
+#visualisation {
+  position: relative;
+  top: 0;
+  width: 100%;
+}
+
+#narrative {
+  position: relative;
+  width: 65%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2%;
+  border-top: 2px dotted black;
+  text-align: center;
+}
+
+#download {
+  padding: 5px;
+  font-size: 150%;
+  font-family: 'Cairo', sans-serif;
+  float: right;
+  margin: 5%;
+  border: 1px solid black;
+}
+
+#download:hover {
+  background-color: #FFDA66;
+}
+
+#download:active {
+  background-color: #fefefe;
+}
+
+a {
+  color: #8647A8;
+}
+a:hover {
+  color: #BC47A9;
+}
+h1 {
+  font-size: 250%;
+  font-weight: 300;
+}
+h2 {
+  font-size: 185%;
+  font-weight: 200;
+}
+h3 {
+  font-size: 170%;
+  font-weight: 200;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+p {
+  font-size: 135%;
+  font-weight: 200;
+}
