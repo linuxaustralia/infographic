@@ -65,9 +65,16 @@ var markerOpacity = 0.9;
 var lineOpacity = 0.7;
 var linePercentage = 0.9; // a value between 0 and 1 representing what percentage of the radius the label line is.
 
-var pieStartAngle = -30; // value in degrees of start angle of pie chart.
+// Set the angles for the pie chart
+
+var pieStartAngle = 1.2; // value in RADIANS of start angle of pie chart.
 // used for rotation where text layout is "bunched" at the top, ie
 // for many small values
+
+var pieEndAngle = ( pieStartAngle - (Math.PI * 2));
+
+// there are 2 pi radians in a circle, this makes the pie chart finish
+// "all the way around", otherwise there will be blank space
 
 /*
   Main Annular
@@ -92,6 +99,7 @@ var ExpensesTitleArc = d3.arc()
 var ExpensesPie = d3.pie()
     .sort(null)
     .startAngle(pieStartAngle)
+    .endAngle(pieEndAngle)
     .value(function(d) { return d.Value; });
 
 /*
