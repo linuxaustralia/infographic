@@ -12,7 +12,8 @@ Detailed procedure (2020 version, earlier years are different):
 
  * `git clone git@github.com:linuxaustralia/infographic.git`
 
- * Create this years version by copying last years effort: `cd infographic && cp -a 20xx 20yy && rm 20yy/la-expenses-20*-20*.svg`
+ * Create this years version by copying last years effort:
+   `cd infographic && cp -a 20xx 20yy && rm 20yy/la-expenses-20*-20*.svg`
 
  * Get the final figures from the treasurer, and replace last years
    figures in `20yy/charts/expenses.csv` with the new ones,
