@@ -13,17 +13,23 @@ Detailed procedure (2020 version, earlier years are different):
  * `git clone git@github.com:linuxaustralia/infographic.git`
 
  * Create this years version by copying last years effort:
-   `cd infographic && cp -a 20xx 20yy && rm 20yy/la-expenses-20*-20*.svg`
+   `cd infographic && cp -a 20xx 20yy`
+
+ * Install the fonts used by the SVG:
+   `mkdir --parents ~./local/share/fonts && cp 20yy/fonts/* ~/.local/share/fonts`
 
  * Get the final figures from the treasurer, and replace last years
    figures in `20yy/charts/expenses.csv` with the new ones,
    but be sure to preserve the 1st line as it contains the column names.
 
  * Load `20yy/charts/expenses.html` in a browser, eg by arranging for
-   `http://[::1]/infofile/20yy/charts/expenses.html` to work.
+   `http://[::1]/infographic/20yy/charts/expenses.html` to work.
    file:// doesn't work due to CORS restrictions, you need http://
    or https://.  Ensure the year (eg `/2020/`) appears in the URL
    so the graphs title is set correctly.
+
+ * Change the size of the browser window and refresh to get nice
+   proportions.
 
  * Notice the pie labels (ie, the account names), are all over the place,
    and get an irrepressible urge to fix them.

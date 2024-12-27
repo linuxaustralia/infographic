@@ -55,7 +55,7 @@ svg textPath.ExpensesTitle {
 }
 svg text.ExpensesLabels {
   src: url('../fonts/Cairo-SemiBold.ttf');
-  font-size: 14px;
+  font-size: 24px;
   font-weight: 400;
   fill: #393939;
 }
