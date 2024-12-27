@@ -16,7 +16,7 @@ Detailed procedure (2020 version, earlier years are different):
    `cd infographic && cp -a 20xx 20yy`
 
  * Install the fonts used by the SVG:
-   `mkdir --parents ~./local/share/fonts && cp 20yy/fonts/* ~/.local/share/fonts`
+   `mkdir --parents ~/.local/share/fonts && cp 20yy/fonts/* ~/.local/share/fonts`
 
  * Get the final figures from the treasurer, and replace last years
    figures in `20yy/charts/expenses.csv` with the new ones,
